@@ -20,8 +20,6 @@ pkgver() {
 
 build() {
 	cd "$_pkgname"/src/
-	# edit makefile
-	sed -e 14d -e 16d -e '15 s/install/& -Dm 755 /'  -i Makefile
 	make
 }
 
